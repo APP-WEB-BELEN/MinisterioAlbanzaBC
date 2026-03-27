@@ -362,14 +362,14 @@
 
         <!-- Pantalla: ya enviaste disponibilidad -->
         <div id="pantallaYaEnvio" style="display:none; text-align:center; padding:30px 10px;">
-            <div style="font-size:52px; margin-bottom:16px;">✅</div>
-            <h2 style="color:#00c9a7; margin-bottom:10px;">¡Ya enviaste tu disponibilidad!</h2>
+            <div style="font-size:52px; margin-bottom:16px;">❌</div>
+            <h2 style="color:#00c9a7; margin-bottom:10px;">¡No puedes enviar esta disponibilidad!</h2>
             <p style="color:#aac; font-size:15px; line-height:1.8;">
                 El número de WhatsApp que ingresaste ya tiene una disponibilidad registrada a nombre de:
             </p>
             <p id="nombreYaEnvio" style="color:white; font-size:20px; font-weight:600; margin:8px 0 16px;"></p>
             <p style="color:#7a9aa8; font-size:13px; line-height:1.6;">
-                Si crees que esto es un error o necesitas corregir tu disponibilidad,<br>contacta a la directiva.
+                Si crees que es un error o necesitas corregir tu disponibilidad,<br>contacta a la directiva para eliminar la disponibilidad registrada.
             </p>
         </div>
 
@@ -703,7 +703,7 @@
                     const tipoLabel = tipoUsuario === "voces" ? "vocalista" : "músico";
                     document.getElementById("nombreYaEnvio").textContent = datos.nombre;
                     document.getElementById("pantallaYaEnvio").querySelector("h2").textContent =
-                        `¡Ya enviaste tu disponibilidad como ${tipoLabel}!`;
+                        `¡No puedes enviar esta disponibilidad como ${tipoLabel}!`;
                     document.getElementById("contenidoPrincipal").style.display = "none";
                     document.getElementById("pantallaYaEnvio").style.display = "block";
                     return;
